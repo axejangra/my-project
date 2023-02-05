@@ -1,6 +1,6 @@
 
 import PropTypes from 'prop-types'
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 
 export default function Navbar(props) {
@@ -18,14 +18,15 @@ export default function Navbar(props) {
                 <a className="nav-link active" aria-current="page" href="/home">{props.Home}</a>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="">Link</Link>
+                <a className="nav-link" href="/">Link</a>
+                {/* <Link className="nav-link" to="">Link</Link> */}
               </li>
               <li className="nav-item dropdown">
                 <a className="nav-link dropdown-toggle" href="/" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Dropdown
                 </a>
                 <ul className="dropdown-menu">
-                  <li><Link className="dropdown-item" to="/action">Action</Link></li>
+                  {/* <li><Link className="dropdown-item" to="/action">Action</Link></li> */}
                   <li><a className="dropdown-item" href="/">Another action</a></li>
                   <li><hr className="dropdown-divider" /></li>
                   <li><a className="dropdown-item" href="/">Something else here</a></li>

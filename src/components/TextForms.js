@@ -37,21 +37,21 @@ export default function TextForms(props) {
   }
   return (
     <>
-      <div className="container">
+      <div className="container my-2">
         <h2>{props.heading}</h2>
         <div className="mb-3">
           <textarea className="form-control" value={text} onChange={handleOnChange} id="mybox" rows="8" placeholder='enter text here'></textarea>
         </div>
-        <button className="btn btn-primary mx-2" onClick={handleupClick}>convrt to upper case</button>
-        <button className="btn btn-primary mx-2" onClick={handleLoClick}>convrt to lower case</button>
-        <button className="btn btn-primary mx-2" onClick={handleclear}>clear text</button>
-        <button className="btn btn-primary mx-2" onClick={handleCopy}>copy text</button>
+        <button className="btn btn-primary mx-2 my-2" onClick={handleupClick}>convrt to upper case</button>
+        <button className="btn btn-primary mx-2 my-2" onClick={handleLoClick}>convrt to lower case</button>
+        <button className="btn btn-primary mx-2 my-2" onClick={handleclear}>clear text</button>
+        <button className="btn btn-primary mx-2 my-2" onClick={handleCopy}>copy text</button>
 
       </div>
       <div className="container">
         <h1>your text summary</h1>
 
-        <p>{text.split(" ").length} words  and  {text.length} characters </p>
+        <p>{text.split(/\s+/).filter((element)=>{return element.length!==0}).length} words  and  {text.length} characters </p>
       </div>
     </>
   );

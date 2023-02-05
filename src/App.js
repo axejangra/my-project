@@ -7,14 +7,14 @@ import Navbar from "./components/Navbar";
 import TextForms from "./components/TextForms";
 import Alert from './components/Alert';
 
-import About from './components/About';
-import {
-  BrowserRouter as Router,
+// import About from './components/About';
+// import {
+//   BrowserRouter as Router,
   
-  Route,
-  Link,
-  Routes
-} from "react-router-dom";
+//   Route,
+//   Link,
+//   Routes
+// } from "react-router-dom";
 
 
 function App() {
@@ -41,21 +41,21 @@ function App() {
   }
   return (
     <>
-      <Router>
+      {/* <Router> */}
         <Navbar title="my-App" mode={mode} toggleMode={toggleMode} />
         <Alert alert={alert} />
-        <Routes>
-        <Route path="" element={<TextForms heading="enter a text to analyze" />}/>
-          <Route path="/action" element={<About/>}/>
+        {/* <Routes> */}
+        {/* <Route path="" element={<TextForms heading="enter a text to analyze" />}/> */}
+          {/* <Route path="/action" element={<About/>}/> */}
             
-          
+          <TextForms heading="enter a text to analyze" />
 
           
             
           
-        </Routes>
+        {/* </Routes> */}
 
-      </Router>
+      {/* </Router> */}
     </>
   );
 }
